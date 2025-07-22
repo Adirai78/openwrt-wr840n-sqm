@@ -31,8 +31,8 @@ jobs:
     - name: Copy custom.config
       run: |
         cd openwrt
-        cp ../custom.config .config
-        yes "" | make defconfig
+        cp $GITHUB_WORKSPACE/custom.config .config
+
 
     - name: Copy files (IP LAN 192.168.33.1)
       run: |
