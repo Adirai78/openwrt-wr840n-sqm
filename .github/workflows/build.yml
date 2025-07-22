@@ -45,8 +45,9 @@ jobs:
         make -j$(nproc) download
         make -j$(nproc) V=s
 
-    - name: Upload firmware
-      uses: actions/upload-artifact@v3
+   - name: Upload firmware
+     uses: actions/upload-artifact@v4
+
       with:
         name: firmware-wr840n-v6.2
         path: openwrt/bin/targets/ramips/mt76x8/*sysupgrade.bin
